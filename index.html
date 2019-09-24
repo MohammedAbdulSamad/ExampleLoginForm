@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Example Login Form</title>
+  <link rel="stylesheet" type="text/css" href="style.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"  charset="utf-8"></script>
+</head>
+<body>
+  <form action="index.html" class="login-form">
+    <h1> LOGIN </h1>
+
+    <div class="textBox">
+      <input type="text">
+      <span data-placeholder="Username"></span>
+    </div>
+    <div class="textBox">
+      <input type="password">
+      <span data-placeholder="Password"></span>
+    </div>
+
+    <input type="submit" class="logbutton" value="LOGIN">
+
+    <div class="end-text">
+      Don't have an account? <a href="">Sign Up</a> now
+    </div>
+  </form>
+
+  <script type="text/javascript">
+    $(".textBox input").on("focus", function() {
+      $(this).addClass("focus");
+    });
+
+    $(".textBox input").on("blur", function() {
+      if ($(this).val() == "")
+      $(this).removeClass("focus");
+    });
+
+  </script>
+</body>
+</html>
